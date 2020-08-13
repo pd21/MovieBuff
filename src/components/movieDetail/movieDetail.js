@@ -33,12 +33,11 @@ class MovieDetail extends React.Component{
             movieData : '',
             movieCast : '',
             simlarMovie: '',
+            location: window.location.pathname,
         }
     }
 
-    componentDidMount(){
-        const movieId = window.location.pathname.split('/').pop()
-
+    apiCall = (movieId) => {
         const movieDetailApi = `https://api.themoviedb.org/3/movie/${movieId}?api_key=08f31c809a8ba972b87a3748c6885970&language=en-US`
         const movieCastApi = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=08f31c809a8ba972b87a3748c6885970`
         const simlarMovieApi = `https://api.themoviedb.org/3/movie/${movieId}/similar?api_key=08f31c809a8ba972b87a3748c6885970&language=en-US&page=1`
@@ -63,12 +62,28 @@ class MovieDetail extends React.Component{
 
     }
 
-    render(){
+    componentDidMount(){
+        const movieId = window.location.pathname.split('/').pop()
+        this.apiCall(movieId)
+    }
 
+    componentDidUpdate(){
+        const id = window.location.pathname.split('/').pop()
+        if(window.location.pathname !== this.state.location){
+            this.setState({
+                location: window.location.pathname
+            },()=>{
+                this.apiCall(id)
+            })
+        }
+
+    }
+
+    render(){
+        console.log('I am called')
         const { movieData, movieCast, simlarMovie } = this.state
 
         const movieCastArray = movieCast.cast && movieCast.cast.slice(0,10)
-        console.log('similar movie', this.state.simlarMovie)
         return(
             <MovieDetailContainer>
                 <Navbar />
@@ -92,11 +107,10 @@ class MovieDetail extends React.Component{
                     </MovieDescriptionContainer>
                     } 
                 </DetailContainer>
-                <SimlarMovieContainer>
-                    <SimilarMovieTitle>You may also like</SimilarMovieTitle>
-                    <CardMain cardMaindata={simlarMovie} />
-                    
-                </SimlarMovieContainer>
+                {simlarMovie && <SimlarMovieContainer>
+                    <SimilarMovieTitle>You might also like</SimilarMovieTitle>
+                    <CardMain cardMaindata={simlarMovie}/>
+                </SimlarMovieContainer>}
             </MovieDetailContainer>
         )
     }

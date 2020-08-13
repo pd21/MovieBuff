@@ -1,7 +1,8 @@
 import React from 'react'
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom'
 
 import { getRating } from '../../utils/getRating'
+
 
 import {
     ItemContainer,
@@ -25,10 +26,8 @@ class CardMain extends React.Component{
         this.props.history.push(`/movie/${id}`)
     }
 
-
     render(){
         const {cardMaindata} = this.props
-        console.log('receied', cardMaindata)
         return(
             <ItemContainer>
             {
@@ -46,7 +45,6 @@ class CardMain extends React.Component{
               </Item>)
             }
             </ItemContainer>
-
         )
     }
 }

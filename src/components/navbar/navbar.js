@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { withRouter, BrowserRouter , Link } from "react-router-dom";
+import { withRouter} from "react-router-dom";
 
 import {
     MainPageSearchContainer,
@@ -35,8 +35,7 @@ class Navbar extends React.Component{
 
 
     render(){
-        return(
-            <BrowserRouter>    
+        return(   
                 <MainPageSearchContainer>
                     <MainPageTitle><a href='/'>Movie Buff </a></MainPageTitle>
                     <SearchBarContainer>
@@ -44,7 +43,6 @@ class Navbar extends React.Component{
                         <FontAwesome className="fab fa-searchengin" onClick={this.handleClickSearchIcon}></FontAwesome>
                     </SearchBarContainer>
                 </MainPageSearchContainer>
-            </BrowserRouter>
         )
     }
 }

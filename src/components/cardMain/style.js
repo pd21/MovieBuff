@@ -29,6 +29,7 @@ export const ItemImage = styled.div`
   width: 385px;
   height: 280px;
   position: relative;
+  cursor: pointer;
 `
 
 export const ItemTitle = styled.div`

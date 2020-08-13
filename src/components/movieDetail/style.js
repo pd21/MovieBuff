@@ -3,8 +3,7 @@ import styled from 'styled-components'
 export const MovieDetailContainer = styled.div``
 
 export const DetailContainer = styled.div`
-  padding: 0px 100px ;
-  height: 900px;
+  padding: 0px 100px 20px 100px;
 `
 
 export const MovieDescriptionContainer = styled.div`
@@ -68,4 +67,4 @@ export const SimlarMovieContainer = styled.div`
   padding: 0px 100px;
 `
 
-export const SimilarMovieTitle = styled.div``
+export const SimilarMovieTitle = styled(TitleContainer)``
