@@ -5,7 +5,14 @@ export const MainPageContainer = styled.div`
   min-height: 100vh;
 `
 export const MainPageContentContainer = styled.div`
-   padding: 0px 100px;
+  padding: 0px 100px;
+
+  @media only screen and  (max-device-width : 768px) {
+    padding:0px;
+  }
+  @media only screen and  (max-device-width : 320px) {
+    padding:0px;
+  }
 `
 
 export const MainPageBanner = styled.div`

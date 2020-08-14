@@ -1,16 +1,28 @@
 import styled from 'styled-components'
 
 export const MainPageSearchContainer = styled.div`
-  height: 50px;
-  padding: 10px;
+  padding: 10px 40px;
   display: flex;
+  align-items: center;
+
+  @media only screen and  (max-device-width : 768px) {
+    padding: 10px 
+  }
+  @media only screen and  (max-device-width : 608px) {
+    padding: 10px 
+  }
 `
 export const MainPageTitle = styled.div`
   font-size: 28px;
-  padding-left: 20px;
   color: #a72693;
   font-weight: 600;
-  margin-top:5px;
+
+  @media only screen and  (max-device-width : 768px) {
+    font-size: 16px;
+  }
+  @media only screen and  (max-device-width : 608px) {
+    font-size: 16px;
+  }
 `
 export const SearchBarContainer = styled.div`
   position: relative;
@@ -19,7 +31,6 @@ export const SearchBarContainer = styled.div`
 export const InputBox = styled.input`
   margin-left: 91px;
   padding: 5px 10px;
-  margin-top: 5px;
   width: 650px;
   height: 40px;
   box-sizing: border-box;
@@ -32,6 +43,21 @@ export const InputBox = styled.input`
   &:hover{
     border: inherit;
   }
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+    width: 500px;
+    margin-left:15px;
+  }
+
+  @media only screen and  (max-device-width : 768px) {
+    margin-left: 15px;
+    width: 450px;
+  }
+  @media only screen and  (max-device-width : 608px) {
+    margin-left: 5px;
+    width: 250px;
+    height: 30px;
+  }
+    
 `
 export const FontAwesome = styled.i`
   font-size: 22px;
@@ -39,4 +65,7 @@ export const FontAwesome = styled.i`
   top: 14px;
   right: 10px;
   color: #24a19c;
+  @media only screen and  (max-device-width : 608px) {
+    top: 5px;
+  }
 `

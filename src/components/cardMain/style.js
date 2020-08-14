@@ -23,6 +23,10 @@ export const ItemContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media only screen and  (max-device-width : 768px) {
+    justify-content: center;
+  }
 `
 
 export const ItemImage = styled.div`
