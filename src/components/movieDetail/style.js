@@ -4,10 +4,16 @@ export const MovieDetailContainer = styled.div``
 
 export const DetailContainer = styled.div`
   padding: 0px 100px 20px 100px;
+  @media only screen and  (max-device-width : 768px) {
+    padding:0px 0px 20px 0px; 
+  }
 `
 
 export const MovieDescriptionContainer = styled.div`
   display: flex;
+  @media only screen and  (max-device-width : 768px) {
+    flex-direction: column;
+  }
 `
 
 export const ImageContainer = styled.div``
@@ -15,13 +21,19 @@ export const ImageContainer = styled.div``
 export const DescriptionContainer = styled.div`
   padding-left: 50px;
   max-width: 800px;
+  @media only screen and  (max-device-width : 768px) {
+    padding:10px;
+  }
 `
 
 export const TitleContainer = styled.div`
   font-size: 28px;
   font-weight: 600;
   color: rgba(0,0,0,0.9);
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  @media only screen and  (max-device-width : 768px) {
+    font-size: 16px;
+  }
 `
 
 export const Year = styled.div`
@@ -65,6 +77,9 @@ export const Image = styled.img`
 `
 export const SimlarMovieContainer = styled.div`
   padding: 0px 100px;
+  @media only screen and  (max-device-width : 768px) {
+    padding: 0px 10px;
+  }
 `
 
 export const SimilarMovieTitle = styled(TitleContainer)``

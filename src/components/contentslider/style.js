@@ -4,6 +4,9 @@ export const SlideCastImage = styled.div`
   width: 800px;
   overflow: hidden;
   position: relative;
+  @media only screen and  (max-device-width : 768px) {
+    width: 100%;
+  }
 `
 export const SlideCastImageContent = styled.div`
   display: flex;

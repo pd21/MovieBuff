@@ -80,7 +80,6 @@ class MovieDetail extends React.Component{
     }
 
     render(){
-        console.log('I am called')
         const { movieData, movieCast, simlarMovie } = this.state
 
         const movieCastArray = movieCast.cast && movieCast.cast.slice(0,10)
