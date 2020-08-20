@@ -19,7 +19,7 @@ class MainPage extends React.Component{
     this.state = {
       topRatedResult : '',
       searchIconClicked: false,
-      searchResult: ''
+      searchResult: '',
     }
   }
 

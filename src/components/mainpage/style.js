@@ -3,6 +3,12 @@ import styled from 'styled-components'
 export const MainPageContainer = styled.div`
   background-color: #fff;
   min-height: 100vh;
+  position: relative;
+  border: 2px solid red;
+  @media only screen and  (max-device-width : 320px) {
+    min-width: 100vw;
+  }
+
 `
 export const MainPageContentContainer = styled.div`
   padding: 0px 100px;

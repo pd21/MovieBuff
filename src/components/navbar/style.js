@@ -4,6 +4,7 @@ export const MainPageSearchContainer = styled.div`
   padding: 10px 40px;
   display: flex;
   align-items: center;
+  position: relative;
 
   @media only screen and  (max-device-width : 768px) {
     padding: 10px 
@@ -41,7 +42,7 @@ export const InputBox = styled.input`
   text-transform: capitalize;
 
   &:hover{
-    border: inherit;
+    border:1px solid #c0c0c0;;
   }
   @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
     width: 500px;
@@ -62,7 +63,7 @@ export const InputBox = styled.input`
 export const FontAwesome = styled.i`
   font-size: 22px;
   position: absolute;
-  top: 14px;
+  top: 9px;
   right: 10px;
   color: #24a19c;
   @media only screen and  (max-device-width : 608px) {

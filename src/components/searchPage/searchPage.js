@@ -53,12 +53,15 @@ class SearchPage extends React.Component{
 
     render(){
         const { searchResult,  location} = this.state
+
+        const searchTerm = decodeURI(location.split('/').pop())
+
         return(
             <SearchContainer>
                 <Navbar />
                 {searchResult && 
                     <Search>
-                        <SearchPageTitle>{searchResult.length} Search Result for {location.split('/').pop()}</SearchPageTitle>
+                        <SearchPageTitle>{searchResult.length} Search Result for {searchTerm}</SearchPageTitle>
                         <CardContent><Card searchResult={searchResult} /></CardContent>
                         
                     </Search>
