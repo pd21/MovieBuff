@@ -74,6 +74,7 @@ class MovieDetail extends React.Component{
                 location: window.location.pathname
             },()=>{
                 this.apiCall(id)
+                window.scrollTo(0, 0)
             })
         }
 

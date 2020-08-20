@@ -7,9 +7,11 @@ import {
     SearchContainer,
     SearchPageTitle,
     Search,
-    CardContent
+    CardContent,
+    NoResult
 } from './style'
 
+import noresult from '../../images/no_result-found.png'
 
 class SearchPage extends React.Component{
 
@@ -65,6 +67,12 @@ class SearchPage extends React.Component{
                         <CardContent><Card searchResult={searchResult} /></CardContent>
                         
                     </Search>
+                }
+                {
+                    searchResult.length === 0 && 
+                    <NoResult>
+                        <img src={noresult}/>
+                    </NoResult>
                 }
             </SearchContainer>
         )

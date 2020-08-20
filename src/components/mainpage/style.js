@@ -4,7 +4,6 @@ export const MainPageContainer = styled.div`
   background-color: #fff;
   min-height: 100vh;
   position: relative;
-  border: 2px solid red;
   @media only screen and  (max-device-width : 320px) {
     min-width: 100vw;
   }

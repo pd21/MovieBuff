@@ -40,7 +40,7 @@ class Navbar extends React.Component{
                         <InputBox 
                             type='text' 
                             name='searchText' 
-                            placeholder='Search....' 
+                            placeholder='search....' 
                             onChange={(e)=>this.handleChange(e)}
                             onKeyPress={(e) => {
                                 if(e.key === 'Enter'){

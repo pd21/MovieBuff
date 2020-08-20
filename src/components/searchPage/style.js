@@ -24,3 +24,7 @@ export const CardContent = styled.div`
     padding: 0px 
   }
 `
+
+export const NoResult = styled.div`
+  text-align: center;
+`

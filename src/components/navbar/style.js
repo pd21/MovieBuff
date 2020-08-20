@@ -41,6 +41,11 @@ export const InputBox = styled.input`
   font-size: 16px;
   text-transform: capitalize;
 
+  ::placeholder {
+    color: rgba(0,0,0,0.3);
+    font-weight: 600;
+  }
+
   &:hover{
     border:1px solid #c0c0c0;;
   }
