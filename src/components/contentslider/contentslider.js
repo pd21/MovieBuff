@@ -1,5 +1,7 @@
 import React from 'react'
 
+import noimage from '../../images/imageNo.png'
+
 import {
     SlideCastImage,
     SlideCastImageContent,
@@ -9,6 +11,7 @@ import {
     Character,
     Arrow,
 } from './style'
+
 
 class ContentSlider extends React.Component{
     constructor(props){
@@ -80,7 +83,12 @@ class ContentSlider extends React.Component{
                     sliderArray && sliderArray.map(item=>{
                         return(
                                 <div>
-                                <CastImageContainer><Image src={`https://image.tmdb.org/t/p/w500/${item.profile_path}`} /></CastImageContainer>
+                                <CastImageContainer>
+                                    { item.profile_path ? 
+                                       <Image src={`https://image.tmdb.org/t/p/w500/${item.profile_path}`}/> :
+                                       <Image src={noimage}/>
+                                    }
+                                </CastImageContainer>
                                 <Name>{item.name}</Name>
                                 <Character>as {item.character}</Character>
                                 </div>
