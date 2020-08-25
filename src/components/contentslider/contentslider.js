@@ -25,7 +25,7 @@ class ContentSlider extends React.Component{
     nextSlide = () => {
       const { activeIndex, disablePrev } = this.state
 
-      if( activeIndex === 7){
+      if( activeIndex === this.props.sliderArray.length - 3){
         this.setState({
             disableNext : true
         })
