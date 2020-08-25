@@ -16,6 +16,7 @@ export const Item = styled.div`
   &:hover{
     background: rgba(0,0,0,0.25);
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transition: box-shadow 0.45s ease-in-out;
   }
 `
 

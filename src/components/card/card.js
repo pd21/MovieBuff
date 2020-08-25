@@ -2,7 +2,7 @@ import React from 'react'
 
 import { withRouter } from 'react-router-dom'
 
-import { getRating, getGenre } from '../../utils/getRating'
+import { getRating } from '../../utils/getRating'
 
 import {
     CardContainer,
@@ -13,7 +13,6 @@ import {
     CardTitle,
     CardStar,
     CardGenre,
-    CardGenreItem,
     CardOverview
 } from './style'
 

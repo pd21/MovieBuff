@@ -69,7 +69,7 @@ class ContentSlider extends React.Component{
 
     render(){
         const { sliderArray } = this.props
-        const { translate, transition, activeIndex, disableNext, disablePrev} = this.state
+        const { translate, transition, disableNext, disablePrev} = this.state
         return(
             <SlideCastImage>
                 <SlideCastImageContent

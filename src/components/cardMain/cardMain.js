@@ -18,10 +18,6 @@ import {
 
 class CardMain extends React.Component{
 
-    constructor(props){
-        super(props)
-    }    
-
     handleClick = (id) => {
         this.props.history.push(`/movie/${id}`)
     }
@@ -32,7 +28,7 @@ class CardMain extends React.Component{
             <ItemContainer>
             {
               cardMaindata && cardMaindata.map((item)=>  
-              <Item onClick={()=>this.handleClick(item.id)}>
+              <Item  onClick={()=>this.handleClick(item.id)}>
                 <ItemImage>
                    <Background imageUrl={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}></Background>
                    <Img src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}/>

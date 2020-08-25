@@ -10,8 +10,6 @@ import {
     CardContent,
 } from './style'
 
-import noresult from '../../images/no_result-found.png'
-
 class SearchPage extends React.Component{
 
     constructor(props){
