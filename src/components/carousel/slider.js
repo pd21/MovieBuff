@@ -31,6 +31,8 @@ const Slider = props => {
    const { translate, transition, activeIndex } = state
    const autoPlayRef = useRef()
 
+   console.log('activeIndex', activeIndex)
+
    useEffect(() => {
       autoPlayRef.current = nextSlide
    })
@@ -78,6 +80,15 @@ const Slider = props => {
        
    }
 
+   const handleClickDot = (i) => {
+       console.log('I am clicked',  i)
+       setState({
+           ...state,
+           activeIndex: i,
+           translate: i * getWidth()
+       })
+   }
+
     return(
         <SliderContainer> 
             <SliderContent 
@@ -91,16 +102,16 @@ const Slider = props => {
                 ))
             }
             </SliderContent>
-            { !props.autoPlay &&
+            {/* { !props.autoPlay &&
                 <>
                 <Arrow direction='right' onClick={nextSlide}><i className="fas fa-caret-right"></i></Arrow>
                 <Arrow direction='left' onClick={prevSlide}><i className="fas fa-caret-left"></i></Arrow>
                 </> 
-            }
+            } */}
             <DotContainer>
             {
                 images.map((item,i) => (
-                    <Dot key={item} active={activeIndex === i}/>
+                    <Dot key={item} active={activeIndex === i} onClick={()=>handleClickDot(i)}/>
                 ))
             }
             </DotContainer>
